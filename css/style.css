@@ -1,0 +1,555 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  max-width: 100vw;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "wrap"
+    "main"
+    "contact"
+}
+
+.wrap {
+  grid-area: wrap;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  display: flex;
+  text-align: right;
+  background-color: black;
+}
+
+#nav {
+  display: inline;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.menuLines {
+  width: 2.5em;
+}
+
+#closebtn {
+  position: absolute;
+  font-size: 27px;
+  color: white;
+  top: 5px;
+  right: 13px;
+  border: 0;
+}
+
+.menuBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+
+#dropdownMenu {
+  display: none;
+}
+
+.dropdownContent {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dropdownContent-content {
+  top: 25%;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+  padding-left: 0;
+  margin: auto;
+  position: relative;
+}
+
+.dropdownContent li:first-child {
+  border-top: 1px solid #606060;
+}
+
+.dropdownContent li {
+  display: block;
+}
+
+.dropdownContent a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+  line-height: 3em;
+  border-bottom: 1px solid #606060;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+}
+
+.dropdownContent a:hover, .dropdownContent a:focus {
+  color: #f1f1f1;
+}
+
+.space {
+  margin-top: 30px;
+}
+
+h1 {
+  width: 90%;
+  border-bottom: 2px solid black;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 20px;
+  padding-top: 2.5em;
+  padding-bottom: 1em
+}
+
+.hackmindLogo {
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+}
+
+.mainSection {
+  background-image:
+    linear-gradient(to bottom, rgba(237, 78, 78, 0.5), rgba(237, 78, 78, 0.9)),
+    url('../images/rsz_keyboard4.jpg');
+  width: 100vw;
+  background-size: cover;
+}
+
+.mainInner {
+  padding-bottom: 10px;
+}
+
+#banner p {
+  color: black;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 1em 0 1em 0;
+}
+
+.content p {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.actions a {
+  border: 1px solid #ef6767;
+  text-decoration: none;
+  padding: 10px;
+  color: #ef6767;
+  margin-left: 20px;
+}
+
+.actions li {
+  list-style: none;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+#one,
+#two,
+#three {
+  background: black;
+}
+
+#three {
+  border-top: 1px dashed white;
+}
+
+#three p {
+  padding-bottom: 10px;
+}
+
+.inner p {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+}
+
+.inner {
+  padding: 1em 0 1em 0;
+}
+
+h2,
+h3,
+p,
+a,
+span,
+label {
+  color: white;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: auto;
+  margin-left: 20px;
+  display: flex;
+  text-align: left;
+  padding-bottom: 1em;
+  color: #ef6767;
+}
+
+
+.image1 img,
+.image2 img,
+.image3 img {
+  width: 100vw;
+}
+
+.main {
+  grid-area: main;
+}
+
+#contact {
+  grid-area: contact;
+  border-bottom: solid 1px;
+  overflow-x: hidden;
+  display: block;
+}
+
+.fields {
+  margin: 0 0 2em 0;
+  padding-left: 3.25em;
+  position: relative;
+}
+
+.contact-method {
+  padding-left: 2.50em;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.contact-method .mail {
+  width: 30px;
+}
+
+h4 a:hover {
+  background-color: red;
+}
+
+.contact-method .home {
+  width: 30px;
+}
+
+.mail {
+  position: absolute;
+}
+
+.home {
+  position: absolute;
+}
+
+.mapouter {
+  position: relative;
+  text-align: left;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.gmap_canvas {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background: none;
+  height: 60vw;
+  width: 80vw;
+}
+
+.emaiLink {
+  margin-left: 10px;
+}
+
+.contact-method .mapouter {
+  margin: auto;
+}
+
+.contact-method .icon {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#contact h4,
+#contact a,
+#contact p,
+#contact span {
+  color: black;
+}
+
+.contact-method h4 {
+  font-weight: normal;
+  margin-left: 40px;
+  padding-top: 5px;
+}
+
+#contact {
+  background-color: #ef6767;
+}
+
+.form {
+  margin: 0 0 2em 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  padding-left: 0;
+  padding-bottom: 10px;
+}
+
+.github,
+.linkedin {
+  width: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  line-height: 0;
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .mainSection {
+    padding: 4em 3em 2em 3em;
+  }
+
+  h1 {
+    width: 95%;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  #banner p {
+    color: black;
+    font-weight: bold;
+  }
+
+  .inner {
+    padding: 4em 3em 2em 3em;
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: left;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none;
+    height: 40vw;
+    width: 60vw;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #nav {
+    display: inline;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+  }
+
+  .menuBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding-right: 40px;
+    padding-top: 15px;
+  }
+
+  .hackmindLogo {
+    height: 55px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    left: -5px;
+  }
+
+  .spotlights section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .spotlights section .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 70%;
+    font-size: 1.2em;
+  }
+
+  .mainSection {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    padding-bottom: 0.8em;
+  }
+
+  .mainSection p {
+    font-size: 1.2em;
+  }
+
+  #one p,
+  #three p {
+    font-size: 1.2em;
+  }
+
+  .mainInner {
+    padding: 6em 0 2em 0;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .inner:first-child {
+    padding: 3em 0 3em 0;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .inner {
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    max-width: 65em;
+  }
+
+  .inner h2 {
+     font-size: 1.5em;
+  }
+
+  .content{
+    background-image: linear-gradient(rgb(35, 34, 34), rgb(0,0,0));
+  }
+
+  .content:nth-child(2){
+    background-image: linear-gradient(rgb(35, 34, 34), rgb(35, 34, 34));
+  }
+
+  .content:last-child{
+    background-image: linear-gradient(rgb(0,0,0), rgb(35, 34, 34));
+  }
+
+  #one h2,
+  #three h2 {
+    font-size: 1.8em;
+  }
+
+  #three {
+    border-top: none;
+  }
+
+   .spaceB {
+    max-width: 30vw;
+  }
+
+  .image1 img,
+  .image2 img,
+  .image3 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image2 img {
+    float: right;
+  }
+
+.spotlights > section:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+  .mapouter {
+    position: relative;
+    text-align: left;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none;
+    height: 20vw;
+    width: 30vw;
+    z-index: 0;
+  }
+
+  .contact-method .mail {
+    width: 40px;
+  }
+
+  .contact-method .home {
+    width: 40px;
+  }
+
+ .contact-method h4 {
+   padding-top: 13px;
+   margin-left: 45px;
+ }
+
+ .github, .linkedin {
+   width: 50px;
+ }
+}
